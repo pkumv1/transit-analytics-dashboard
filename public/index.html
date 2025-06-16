@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#3b82f6" />
+    <meta name="description" content="Transit System Predictive Analytics Dashboard - Next-Generation AI/ML Operations Platform for Public Transportation" />
+    <meta name="keywords" content="transit, analytics, AI, ML, dashboard, transportation, predictive, monitoring" />
+    <meta name="author" content="eGovMars" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Transit System Predictive Analytics Dashboard" />
+    <meta property="og:description" content="Next-Generation AI/ML Operations Dashboard for Public Transportation" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aiml.egovmars.in" />
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Transit System Predictive Analytics Dashboard" />
+    <meta name="twitter:description" content="Next-Generation AI/ML Operations Dashboard for Public Transportation" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚇</text></svg>" />
+    
+    <!-- Preconnect to external domains for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Tailwind CSS CDN for development -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <title>Transit Analytics Dashboard | eGovMars</title>
+    
+    <!-- Custom CSS for additional animations -->
+    <style>
+      /* Custom loading animation */
+      @keyframes shimmer {
+        0% { background-position: -200px 0; }
+        100% { background-position: calc(200px + 100%) 0; }
+      }
+      
+      .shimmer {
+        background: linear-gradient(90deg, #f0f0f0 25%, transparent 50%, #f0f0f0 75%);
+        background-size: 200px 100%;
+        animation: shimmer 1.5s infinite;
+      }
+      
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      /* Custom focus styles for accessibility */
+      *:focus-visible {
+        outline: 2px solid #3b82f6;
+        outline-offset: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>
+      <div style="display: flex; align-items: center; justify-content: center; height: 100vh; background: #f8fafc; font-family: system-ui;">
+        <div style="text-align: center; max-width: 500px; padding: 2rem; background: white; border-radius: 1rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+          <h1 style="color: #1f2937; margin-bottom: 1rem;">JavaScript Required</h1>
+          <p style="color: #6b7280; margin-bottom: 1.5rem;">This Transit Analytics Dashboard requires JavaScript to function properly. Please enable JavaScript in your browser settings and refresh the page.</p>
+          <button onclick="window.location.reload()" style="background: #3b82f6; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 0.5rem; cursor: pointer;">
+            Refresh Page
+          </button>
+        </div>
+      </div>
+    </noscript>
+    
+    <div id="root"></div>
+    
+    <!-- Error boundary fallback -->
+    <div id="error-fallback" style="display: none;">
+      <div style="display: flex; align-items: center; justify-content: center; height: 100vh; background: linear-gradient(135deg, #fef2f2, #fee2e2);">
+        <div style="text-align: center; max-width: 500px; padding: 2rem; background: white; border-radius: 1rem; box-shadow: 0 10px 25px rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444;">
+          <h1 style="color: #dc2626; margin-bottom: 1rem; font-size: 1.5rem; font-weight: bold;">⚠️ System Error</h1>
+          <p style="color: #6b7280; margin-bottom: 1.5rem;">The dashboard encountered an unexpected error. Please try refreshing the page or contact support if the issue persists.</p>
+          <button onclick="window.location.reload()" style="background: #dc2626; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 0.5rem; cursor: pointer; margin-right: 0.5rem;">
+            Refresh Dashboard
+          </button>
+          <button onclick="window.history.back()" style="background: #6b7280; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 0.5rem; cursor: pointer;">
+            Go Back
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Global error handler -->
+    <script>
+      window.addEventListener('error', function(event) {
+        console.error('Global error:', event.error);
+        // You can add error reporting logic here
+      });
+      
+      window.addEventListener('unhandledrejection', function(event) {
+        console.error('Unhandled promise rejection:', event.reason);
+        // You can add error reporting logic here
+      });
+    </script>
+  </body>
+</html>
